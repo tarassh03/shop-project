@@ -1,14 +1,12 @@
 import React from 'react';
 
-import './reset.css'
-import './base.css'
-import './cart.css'
-import './header.css'
-import './menu.css'
+import '../common/style/reset.css'
+import '../common/style/base.css'
 
-import Header from './Header'
-import Main from './Main'
-import Footer from './Footer'
+
+import Header from './Header/Header'
+import Main from './Main/Main'
+import Footer from './Footer/Footer'
 
 
   
