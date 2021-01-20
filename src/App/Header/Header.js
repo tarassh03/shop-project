@@ -1,28 +1,29 @@
 import React from 'react'
 
+
 import './header.css'
 
 
-import Logo from './Logo'
-import Menu from './Menu'
-import Cart from './Cart'
+import Logo from './Logo/Logo'
+import Menu from './Menu/Menu'
+import Cart from './Cart/Cart'
 
 const Header = () => {
     return (
         <>
         
-        <div class="header">
-            <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3">
+        <div className="header">
+            <div className="container">
+                    <div className="row">
+                        <div className="col-lg-3">
 
                             <Logo/>                                
                         </div>
-                        <div class="col-lg-6">
+                        <div className="col-lg-6">
                             
                             <Menu/>                                
                         </div>
-                        <div class="col-lg-3">
+                        <div className="col-lg-3">
 
                             <Cart/>                                
                         </div>
