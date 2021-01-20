@@ -4,13 +4,13 @@ const Main = () => {
     return (
         <>
 
-            <main class="main">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3">
+            <main className="main">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-3">
                             
                         </div>
-                        <div class="col-lg-9">
+                        <div className="col-lg-9">
                             
                         </div>
                     </div>
