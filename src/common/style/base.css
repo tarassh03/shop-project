@@ -44,3 +44,10 @@ body {
 		width: 1170px;
 	}
 }
+
+.page-title {
+	text-align: center;
+	color: white;
+	font-size: 36px;
+	margin: 15px 0;
+}
