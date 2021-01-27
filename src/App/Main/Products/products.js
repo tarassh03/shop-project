@@ -1,5 +1,6 @@
 const products = [
     {
+        id:1,
         name:"Iphone X",
         description:"This is Iphone X",
         type:"phone",
@@ -7,6 +8,7 @@ const products = [
         price:"500",
     },
     {
+        id:2,
         name:"Iphone XS",
         description:"This is Iphone XS",
         type:"phone",
@@ -14,6 +16,7 @@ const products = [
         price:"1500",
     },
     {
+        id:3,
         name:"Iphone 12",
         description:"This is Iphone X",
         type:"phone",
@@ -21,6 +24,7 @@ const products = [
         price:"2000",
     },
     {
+        id:4,
         name:"Iphone 8",
         description:"This is Iphone 8",
         type:"phone",
