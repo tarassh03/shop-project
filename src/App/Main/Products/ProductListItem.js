@@ -9,15 +9,24 @@ const ProdustListItem = ({
                 type,
                 capacity,
                 price,
+                image,
 }) => {
    
     return (
             <div className="product-list-item">
+                <div className="product-image"> 
+                <img src={image} alt={name}/>
+                </div>
 
                 <div className="product-title">{name}</div>
                 <div className="product-description">{description}</div>
                 <div className="product-features">Type: {type}</div>
                 <div className="product-features">Capacity: {capacity}Gb</div>
+                <div className ="product-quantity">
+                    <button>-</button>
+                    <input type="text" value="1" readOnly/>
+                    <button>+</button>
+                </div>
                 <div className="product-price">$ {price}</div>
                 <div className="btn-add-to-cart">Add to cart</div>
 
@@ -32,11 +41,15 @@ ProdustListItem.PropTyper = {
     type:PropTypes.string.isRequired,
     capacity:PropTypes.number.isRequired,
     price:PropTypes.number.isRequired,
+    image:PropTypes.string,
+    
 
 }
 
 ProdustListItem.defaultProps = {
-    description:"No description ..."
+    description:"No description ...",
+    image:"images/no-image.png"
+    
 }
 
 export default ProdustListItem
