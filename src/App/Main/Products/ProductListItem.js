@@ -11,12 +11,18 @@ import './ProductListItem.css'
 
 
          onIncrementClick () {
-             console.log(this)
+             
             this.setState ((prevState) => ({
                 productCount: prevState.productCount + 1
              }))
         }
     
+        onDecrementClick = () => {
+             
+            this.setState ((prevState) => ({
+                productCount: prevState.productCount - 1
+             }))
+        }
 
 
         render() {
@@ -43,7 +49,7 @@ import './ProductListItem.css'
                     <div className="product-features">Capacity: {capacity}Gb</div>
                     <div className ="product-quantity">
                         <button
-                        
+                        onClick={this.onDecrementClick}
                         >-</button>
                         <input type="text" value={this.state.productCount} readOnly/>
                         <button
