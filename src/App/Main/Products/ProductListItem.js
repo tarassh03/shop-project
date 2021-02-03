@@ -7,7 +7,6 @@ import './ProductListItem.css'
 
         state = {
             productCount:1,
-            color: "green",
          }
 
 

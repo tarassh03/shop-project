@@ -35,6 +35,7 @@ const products = [
         price:1000,
         // image:"images/icon(15).png",
     },
+    
 
 ]
 
