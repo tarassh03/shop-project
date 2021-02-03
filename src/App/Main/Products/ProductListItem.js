@@ -54,7 +54,7 @@ import './ProductListItem.css'
                     <div className="product-description">{description}
                     <p>Color : {this.state.productColor}</p>
                     <button
-                    onClick={()=>this.changeColorClick()}
+                    onClick={() => this.changeColorClick()}
                     >Change color</button>
                     </div>
                     <div className="product-features">Type: {type}</div>
@@ -62,10 +62,12 @@ import './ProductListItem.css'
                     <div className ="product-quantity">
                         <button
                         onClick={this.onDecrementClick}
+                        disabled={this.state.productCount <= 1}
                         >-</button>
                         <input type="text" value={this.state.productCount} readOnly/>
                         <button
                          onClick={() => this.onIncrementClick()}
+                         disabled={this.state.productCount >= 10}
                         >+</button>
                     </div>
                     <div className="product-price">$ {price}</div>
