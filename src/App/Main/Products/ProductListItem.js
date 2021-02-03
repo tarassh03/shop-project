@@ -7,7 +7,8 @@ import './ProductListItem.css'
 
         state = {
             productCount:1,
-        }
+            productColor: "green",
+         }
 
 
          onIncrementClick () {
@@ -23,9 +24,15 @@ import './ProductListItem.css'
                 productCount: prevState.productCount - 1
              }))
         }
+        
+        changeColorClick () {
+            this.setState({
+                productColor : 'red'
+            })
 
+        }
 
-        render() {
+          render() {
 
             const {
                 name,
@@ -44,7 +51,12 @@ import './ProductListItem.css'
                     </div>
     
                     <div className="product-title">{name}</div>
-                    <div className="product-description">{description}</div>
+                    <div className="product-description">{description}
+                    <p>Color : {this.state.productColor}</p>
+                    <button
+                    onClick={()=>this.changeColorClick()}
+                    >Change color</button>
+                    </div>
                     <div className="product-features">Type: {type}</div>
                     <div className="product-features">Capacity: {capacity}Gb</div>
                     <div className ="product-quantity">
