@@ -17,6 +17,16 @@ import Footer from './Footer/Footer'
         price:10,
       }
     }
+
+    addProductToCart (count,price) {
+      this.setState((prevState) => ({
+        cartData:{
+          count: prevState.cartData.count + count,
+          price: prevState.cartData.price + (count * price),
+        }
+
+      }))
+    }
    
    
     render() {
@@ -25,6 +35,9 @@ import Footer from './Footer/Footer'
             <Header
               cartData={this.state.cartData}
             />
+            <button
+            onClick={() => this.addProductToCart(1,1000)}
+            >Add to cart</button>
             <Main/>
             <Footer/>
         </>
