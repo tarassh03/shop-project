@@ -3,14 +3,16 @@ import React from 'react'
 import './cart.css'
 
 const Cart = ({
-    count,
-    price,
+    productInCart,
 }) => {
     return (
         <>
                 <div className="cart text-center">
-                    <div className="products-count">{price}</div>
-                    <div className="products-price">$ {count}</div>
+                {
+                    Object.keys(productInCart).map((id) => 
+                        <div key={id}>{id} : {productInCart[id]}</div>
+                    )
+                }
                 </div>
 
         </>

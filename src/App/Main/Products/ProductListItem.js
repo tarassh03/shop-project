@@ -35,6 +35,7 @@ import './ProductListItem.css'
                 capacity,
                 price,
                 image,
+                addProductToCart,
 
             } = this.props;
 
@@ -60,7 +61,9 @@ import './ProductListItem.css'
                         >+</button>
                     </div>
                     <div className="product-price">$ {price}</div>
-                    <div className="btn-add-to-cart">Add to cart</div>
+                    <div className="btn-add-to-cart"
+                        onClick={() => addProductToCart(this.state.productCount,price)}
+                    >Add to cart</div>
     
                 </div>
     
