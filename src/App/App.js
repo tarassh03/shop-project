@@ -20,10 +20,10 @@ import Footer from './Footer/Footer'
 
     addProductToCart = (count,price) => {
       this.setState((prevState) => ({
-        // cartData:{
-        //   count: prevState.cartData.count + count,
-        //   price: prevState.cartData.price + (count * price),
-        // }
+        cartData:{
+          count: prevState.cartData.count + count,
+          price: prevState.cartData.price + (count * price),
+        }
 
       }))
     }
