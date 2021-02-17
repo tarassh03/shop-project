@@ -2,6 +2,8 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 import CartPage from './CartPage/CartPage'
 import ProductList from './Products/ProductList'
+import PaymentPage from './PaymentPage/Payment'
+import ShippingPage from './ShippingPage/Shipping'
 
 const Main = ({
     addProductToCart,
@@ -21,7 +23,8 @@ const Main = ({
                             />} />
                             
                             <Route path='/cart' component={CartPage} />
-
+                            <Route path='/payment' component={PaymentPage} />
+                            <Route path='/shipping' component={ShippingPage} />
                             
                         </div>
                         

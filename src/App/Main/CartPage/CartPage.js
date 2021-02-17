@@ -5,8 +5,7 @@ const CartPage = () => {
         <>
             <h1 className='page-title'>Cart</h1>
 
-
-        </>
+         </>
 
 
     )
