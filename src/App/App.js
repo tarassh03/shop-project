@@ -18,11 +18,11 @@ import Footer from './Footer/Footer'
       }
     }
 
-    addProductToCart = (count,price) => {
+    addProductToCart = (id,count) => {
       this.setState((prevState) => ({
-        cartData:{
-          count: prevState.cartData.count + count,
-          price: prevState.cartData.price + (count * price),
+        productInCart: {
+          ...prevState.productInCart,
+          [id]: (prevState.productInCart[id] || 0) + count
         }
 
       }))
@@ -35,7 +35,7 @@ import Footer from './Footer/Footer'
             <Header
               productInCart={this.state.productInCart}
             />
-             <Main
+            <Main
               addProductToCart={this.addProductToCart}
              />
             <Footer/>

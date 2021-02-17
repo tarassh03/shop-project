@@ -1,4 +1,6 @@
 import React from 'react'
+import { Route } from 'react-router-dom'
+import CartPage from './CartPage/CartPage'
 import ProductList from './Products/ProductList'
 
 const Main = ({
@@ -14,8 +16,13 @@ const Main = ({
                             Filter
                         </div>
                         <div className="col-lg-9">
-                            <ProductList/>
+                            <Route path='/' exact render={() => <ProductList
                             addProductToCart={addProductToCart}
+                            />} />
+                            
+                            <Route path='/cart' component={CartPage} />
+
+                            
                         </div>
                         
                     </div>

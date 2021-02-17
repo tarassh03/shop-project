@@ -29,6 +29,7 @@ import './ProductListItem.css'
           render() {
 
             const {
+                id,
                 name,
                 description,
                 type,
@@ -62,7 +63,7 @@ import './ProductListItem.css'
                     </div>
                     <div className="product-price">$ {price}</div>
                     <div className="btn-add-to-cart"
-                        onClick={() => addProductToCart(this.state.productCount,price)}
+                        onClick={() => addProductToCart(id,this.state.productCount)}
                     >Add to cart</div>
     
                 </div>
