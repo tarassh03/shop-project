@@ -37,6 +37,7 @@ import Footer from './Footer/Footer'
             />
             <Main
               addProductToCart={this.addProductToCart}
+              productInCart={this.state.productInCart}
              />
             <Footer/>
         </>
