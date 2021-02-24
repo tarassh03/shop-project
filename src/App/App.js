@@ -27,6 +27,19 @@ import Footer from './Footer/Footer'
 
       }))
     }
+
+    removeProductFromCart(id) {
+      this.setState((prevState) => {
+        
+        let prevProductsInCart = {...prevState.productInCart}
+
+        delete prevProductsInCart[id];
+
+        return {
+          productInCart:prevProductsInCart
+        }
+      })
+    }
    
    
     render() {
@@ -35,6 +48,7 @@ import Footer from './Footer/Footer'
             <Header
               productInCart={this.state.productInCart}
             />
+            <button onClick={() => this.removeProductFromCart(2)}>Delete Product</button>
             <Main
               addProductToCart={this.addProductToCart}
               productInCart={this.state.productInCart}
