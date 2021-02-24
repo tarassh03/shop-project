@@ -6,7 +6,8 @@ import CartProductListItem from './CartProductListItem'
 const CartProductList = ({
     productInCart,
     productsObject = getProductsObject(products),
-    CartItem = CartProductListItem
+    CartItem = CartProductListItem,
+    removeProductFromCart,
 }) => {
     return (
         <div>
@@ -16,6 +17,7 @@ const CartProductList = ({
                         key={id}
                         product={productsObject[id]}
                         productCount={productInCart[id]}
+                        removeProductFromCart={removeProductFromCart}
                         />
                         
                     )

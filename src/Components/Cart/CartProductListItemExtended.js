@@ -5,6 +5,7 @@ import './CartProductListItemExtended.css'
 const CartProductListItemExtended = ({
     product,
     productCount,
+    removeProductFromCart,
     
 }) => (
        
@@ -27,7 +28,7 @@ const CartProductListItemExtended = ({
                     <p className="cart-extended-sum">
                          Sum for this item: <span className="bold sum-price">$ {(product.price * productCount)} </span> 
                     </p>
-                    <button>Delete Product</button>
+                    <button onClick={() => removeProductFromCart(product.id)}>Delete Product</button>
                 </div>
             </div>
         </div>
