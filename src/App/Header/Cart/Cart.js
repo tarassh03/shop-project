@@ -1,18 +1,13 @@
 import React from 'react'
 import {keys} from 'lodash'
 import './cart.css'
-import products from '../../Main/Products/products'
+import products,{getProductsObject} from '../../Main/Products/products'
 import {Link} from 'react-router-dom'
 
-const productsObject = products.reduce((obj,product) =>({
-    ...obj,
-    [product.id]:product
-}),{})
-
-console.log(productsObject)
 
 const Cart = ({
     productInCart,
+    productsObject = getProductsObject(products)
 }) => {
     return (
         <>
