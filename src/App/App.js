@@ -34,6 +34,15 @@ import Footer from './Footer/Footer'
         productInCart:omit(prevState.productInCart,[id])
       }))
     }
+
+    changeProductQuantity = (productId,count) => {
+      this.setState((prevState) => ({
+        productInCart:{
+          ...prevState.productInCart,
+          [productId]:count
+        }
+      }))
+    }
    
    
     render() {
@@ -46,6 +55,7 @@ import Footer from './Footer/Footer'
               addProductToCart={this.addProductToCart}
               productInCart={this.state.productInCart}
               removeProductFromCart={this.removeProductFromCart}
+              changeProductQuantity={this.changeProductQuantity}
              />
             <Footer/>
         </>
